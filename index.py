@@ -3,7 +3,7 @@ import os
 from deepsegment import DeepSegment
 from deepcorrect import DeepCorrect
 import flask
-from flask import request
+from flask import request, Response
 from flask_cors import CORS
 from gevent.pywsgi import WSGIServer
 import re
@@ -32,7 +32,7 @@ def home():
 # Fav Endpoint
 @app.route('/', methods=['POST'])
 def api_main():
-    return beautify(request.get_data().decode("utf-8"))
+    return Response(beautify(request.get_data().decode("utf-8")), mimetype='text/plain')
 
 # Deep Stuff
 corrector = DeepCorrect('deeppunct_params_en', 'deeppunct_checkpoint_google_news')
