@@ -1,0 +1,6 @@
+tensorflow==1.14.0
+deepcorrect
+deepsegment
+flask
+flask-cors
+gevent
