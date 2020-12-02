@@ -1,7 +1,6 @@
 # GrammerAPI (My code is bad)
 The heroku instance may sleep so it may take a while to reply  
 A grammar fixer that uses AI to fix stuff  
-POST raw data to https://grammarapi.herokuapp.com/  
 
 Models download at the deepcorrect github  
 Credit:
@@ -11,7 +10,7 @@ Credit:
 Basic Function:
 ```
 async function grammarapi(str) {
-    let r = await fetch('https://grammarapi.herokuapp.com', {
+    let r = await fetch('<API>', {
         method: 'POST',
         body: str
     })
